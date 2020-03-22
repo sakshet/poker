@@ -4,6 +4,7 @@ import AboutPage from './about/AboutPage';
 import Header from './common/Header';
 import HomePage from './home/HomePage';
 import PageNotFound from './PageNotFound';
+import PlayPage from './play/PlayPage';
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <Header />
             <Switch>
                 <Route exact path="/" component={HomePage} />
+                <Route path="/play" component={PlayPage} />
                 <Route path="/about" component={AboutPage} />
                 <Route component={PageNotFound} />
             </Switch>          
