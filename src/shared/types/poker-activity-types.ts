@@ -1,5 +1,5 @@
 export interface IActionBarProps {
-    
+	showCheck: boolean;
 }
 
 export interface IHeaderProps {
@@ -10,8 +10,9 @@ export interface IHeaderProps {
 export interface IPokerActivityContainerProps {
 	balance: number;
 	clientName: string;
+	showCheck: boolean;
 }
 
 export interface ITableProps {
-
+	
 }
