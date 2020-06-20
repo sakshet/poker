@@ -13,6 +13,14 @@ export interface IPokerActivityContainerProps {
 	showCheck: boolean;
 }
 
+export interface IPokerActivityContainerState {
+
+}
+
+export interface IPokerActivityAction {
+	type: string;
+}
+
 export interface ITableProps {
 	
 }

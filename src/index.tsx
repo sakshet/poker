@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { PokerActivityContainer } from './containers';
+import { PokerHomepageContainer } from './containers';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <PokerActivityContainer 
-      balance={100}
-      clientName={"Sakshet"}
-      showCheck={false}
-    />
+    <PokerHomepageContainer/>
   </React.StrictMode>,
   document.getElementById('root')
 );
