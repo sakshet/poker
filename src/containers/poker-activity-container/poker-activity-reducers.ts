@@ -1,10 +1,10 @@
 import cloneDeep from 'lodash-es/cloneDeep';
-
 import { Reducer } from 'redux';
 import { IPokerActivityAction, IPokerActivityContainerState } from '../../shared';
 
 const defaultState: IPokerActivityContainerState = {
-
+	clientId: "",
+	clientName: ""
 };
 
 export const pokerActivityReducer: Reducer< 
@@ -16,5 +16,4 @@ export const pokerActivityReducer: Reducer<
 		default:
 			return newState;
 	}
-	return newState;
 };

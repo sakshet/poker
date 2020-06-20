@@ -1,3 +1,5 @@
+import { History } from 'history';
+
 export interface IActionBarProps {
 	showCheck: boolean;
 }
@@ -14,7 +16,8 @@ export interface IPokerActivityContainerProps {
 }
 
 export interface IPokerActivityContainerState {
-
+	clientId: string;
+	clientName: string;
 }
 
 export interface IPokerActivityAction {
@@ -23,4 +26,27 @@ export interface IPokerActivityAction {
 
 export interface ITableProps {
 	
+}
+
+export interface IPokerHomepageContainerProps {
+	history?: History;
+	updateClientId?: (event: React.ChangeEvent<HTMLInputElement>) => IPokerHomepageFormAction;
+	updateClientName?: (event: React.ChangeEvent<HTMLInputElement>) => IPokerHomepageFormAction;
+}
+
+export interface IPokerHomepageFormAction {
+	clientId?: string;
+	clientName?: string;
+	type: string;
+}
+
+export interface IPokerHomepageContainerState {
+	clientId: string;
+	clientName: string;
+}
+
+export interface IApplicationState {
+	poker: {
+		homepage?: IPokerHomepageContainerState
+	}
 }

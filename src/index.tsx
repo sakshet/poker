@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { PokerHomepageContainer } from './containers';
+import { PokerContainer } from './containers';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <PokerHomepageContainer/>
+    <PokerContainer/>
   </React.StrictMode>,
   document.getElementById('root')
 );
