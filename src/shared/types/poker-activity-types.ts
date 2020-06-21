@@ -10,9 +10,16 @@ export interface IHeaderProps {
 }
 
 export interface IPokerActivityContainerProps {
-	balance: number;
-	clientName: string;
-	showCheck: boolean;
+	clientId?: string;
+	clientName?: string;
+	history: History;
+	match?: IUrlMatch;
+}
+
+export interface IUrlMatch {
+	params: {
+		clientId: string;
+	}
 }
 
 export interface IPokerActivityContainerState {
@@ -29,6 +36,8 @@ export interface ITableProps {
 }
 
 export interface IPokerHomepageContainerProps {
+	clientId?: string;
+	clientName?: string;
 	history?: History;
 	updateClientId?: (event: React.ChangeEvent<HTMLInputElement>) => IPokerHomepageFormAction;
 	updateClientName?: (event: React.ChangeEvent<HTMLInputElement>) => IPokerHomepageFormAction;

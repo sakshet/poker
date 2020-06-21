@@ -1,25 +1,32 @@
 import * as React from 'react';
-import { ActionBar, Header, Table } from '../../components';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { IPokerActivityContainerProps } from '../../shared';
-
-export class PokerActivityContainer extends React.Component<IPokerActivityContainerProps> {
+import { Table } from '../../components';
+class PokerActivityContainer extends React.Component<
+	IPokerActivityContainerProps
+> {
+	
 	render(): JSX.Element {
-		const { 
-			balance,
-			clientName,
-			showCheck
-		} = this.props;
-		return (
+		const { clientId } = this.props.match.params;
+		return(
 			<div>
-				<Header
-					balance={balance}
-					clientName={clientName}             
-				/>
+				<div>clientId: {clientId}</div>
 				<Table />
-				<ActionBar
-					showCheck={showCheck}
-				/>
 			</div>
 		);
 	}
 }
+
+const mapDispatchToProps = {
+	
+};
+
+export default withRouter(
+	connect(
+		null,
+		mapDispatchToProps
+	)(PokerActivityContainer)
+);
+
+export { PokerActivityContainer };
